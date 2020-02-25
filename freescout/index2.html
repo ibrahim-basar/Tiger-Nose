@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  margin-right: auto; margin-left: auto;width: 100%;
+  
+}
+
+#top_div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 50%;
+  background-color:orange;
+  text-align:center;
+  font-size: 5vw;
+  color: black;
+}
+
+#bottom_div {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color:black;
+  text-align:center;
+  justify-content: center;
+  color:orange;
+font-size: 5vw;
+  
+}
+body{
+  background-color: black;
+}
+        </style>
+    </head>
+    <body>
+
+        <a href="index1.php"><div id="top_div">
+            <div class="vertical-center">
+            <p>Enter Your Team Data</p>
+          </div>
+        </div>
+    </a>    
+        
+        <a href="result.php"><div id="bottom_div">
+            <div class="vertical-center">
+                <p>Look For New Teams</p>
+              </div>
+        </div></a>
+
+    </body>
+
+</html>

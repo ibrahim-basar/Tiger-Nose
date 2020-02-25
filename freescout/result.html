@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        function readdata(){
+            var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("asd").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "http://freescout.herokuapp.com/teams.json" , true);
+    xmlhttp.send();
+        }
+        readdata();
+        </script>
+
+        <div id="asd"></div>
+    </body>
+
+</html>

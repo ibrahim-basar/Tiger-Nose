@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .asd{
+        margin: 0;
+    position: absolute;
+    text-align: center;
+    margin-right: auto; margin-left: auto;width: 100%;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <div id="demo">
+
+        </div>
+
+        <script>
+            var obj, dbParam, xmlhttp, myObj, x, txt = "";
+            var sortobj;
+        obj = { table: "customers", limit: 20 };
+        dbParam = JSON.stringify(obj);
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            txt += "<table border='1'><tr><th>team#</th><th>param1</th><th>param2</th></tr>"
+            for (x in myObj) {
+            txt += "<tr><td>" + x + "</td><td>"+myObj[x].teamname+"</td></tr>";
+            }
+            txt += "</table>"    
+            document.getElementById("demo").innerHTML = txt;
+        }
+        };
+        xmlhttp.open("POST", "teams.json", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("x=" + dbParam);
+
+
+        function sorting(){
+
+
+        }
+        </script>
+
+
+    </body>
+
+
+
+
+</html>
